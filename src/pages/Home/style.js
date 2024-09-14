@@ -28,9 +28,11 @@ export const HeaderLinks = styled.div`
     gap: 1rem; 
     a{
         text-decoration: none;
-        color: #000;
         font-weight: bold;
+        font-size: clamp(1rem, 3vw, 24px);
     }
+
+    
 `
 
 export const Presentation = styled.div`
@@ -45,13 +47,28 @@ export const Presentation = styled.div`
     }
     span{
         text-align: center;
-        color: #fff;
         h2{
             font-size: 3.6vw;
         }
 
         p{
             font-size: 2vw;
+        }
+    }
+    @media (max-width: 600px) {
+        flex-direction: column-reverse;
+        gap: 3rem;
+        img{
+            width: 50%;
+        }
+
+        span{
+            h2{
+                font-size: 5vw;
+            }
+            p{
+                font-size: 4vw;
+            }
         }
     }
 `
