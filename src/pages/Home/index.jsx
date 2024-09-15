@@ -27,7 +27,7 @@ export default function Home() {
     const [selectedType, setSelectedType] = useState(''); // Estado para o tipo selecionado
 
     useEffect(() => {
-        fetch('public/produtos.json')
+        fetch('/produtos.json')
             .then(response => response.json())
             .then(data => setProdutos(data))
             .catch(error => console.error('Erro ao carregar os produtos:', error));
