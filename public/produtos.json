@@ -1,0 +1,170 @@
+[
+    {
+      "id": 1,
+      "type": "Sushi",
+      "availability": "Indisponivel",
+      "price": 33.00,
+      "image": "../src/assets/listJaponeseFood/sushiHotHoll.png",
+      "description": "Sushi: Salmão, cream cheese envoltos em shari, nori, gergelim e molho tarê, empanados com farinha panko"
+    },
+    {
+      "id": 2,
+      "availability": "Disponivel",
+      "type": "Sushi",
+      "price": 38.00,
+      "image": "../src/assets/listJaponeseFood/sushiNiguiriDeSalmao.png",
+      "description": "Sushi 4 Unidades: Shari coberto com fatia de salmão."
+    },
+    {
+      "id": 3,
+      "availability": "Disponivel",
+      "type": "Sushi",
+      "price": 43.00,
+      "image": "../src/assets/listJaponeseFood/sushiUramakiDeSalmao.png",
+      "description": "Sushi 8 Unidades: Uramaki Salmão envolto em nori, shari e gergelim."
+    },
+    {
+        "id": 4,
+        "availability": "Disponivel",
+        "type": "Combos",
+        "price": 39.99,
+        "image": "../src/assets/listJaponeseFood/ComboQuente.png",
+        "description": "1 Shimeji, 1 Salmão Grelhado, 2 Harumakis de Queijo, 2 Guiozas e 6 Hot Roll"
+    },
+    {
+        "id": 5,
+        "availability": "Disponivel",
+        "type": "Combos",
+        "price": 89.99,
+        "image": "../src/assets/listJaponeseFood/ComboMix.png",
+        "description": "5 Niguiri de salmão, 5 Jdou de salmão, 5 uramaki de salmão, 5 uramaki de skin holl, 5 shakemaki salmão, 5 kani maki, 5 Hot holl,5 Hot couve"
+    },
+    {
+        "id": 6,
+        "availability": "Disponivel",
+        "type": "Combos",
+        "price": 59.90,
+        "image": "../src/assets/listJaponeseFood/ComboEspecial.png",
+        "description": "2 temaki Salmão pequenos, 1 porção de Hot Roll de 5 unidades e 1 porção de Shimeji branco."
+    },
+    {
+        "id": 7,
+        "availability": "Disponivel",
+        "type": "Combos",
+        "price": 139.99,
+        "image": "../src/assets/listJaponeseFood/ComboCasalLovezin.png",
+        "description": "10 Sashimi, 5 Jow de salmão, 5 Niguiri de salmão e 10 Hossomaki de salmão."
+    },
+    {
+        "id": 8,
+        "availability": "Disponivel",
+        "type": "Combos",
+        "price": 164.90,
+        "image": "../src/assets/listJaponeseFood/ComboFamilia.png",
+        "description": "20 salmomaki, 20 hot holl com couve crispy, 20 uramaki filadelfia com batata crispy, 20 kanimaki, 20 uramaki de salmão e 16 sashimi de salmão"
+    },
+    {
+        "id": 9,
+        "availability": "Disponivel",
+        "type": "Temaki",
+        "price": 24.90,
+        "image": "../src/assets/listJaponeseFood/TemakiShimejiCompleto.png",
+        "description": "Arroz japonês, alga, shimeji, maionese ou cheam cheese e cebolinha"
+    },
+    {
+        "id": 10,
+        "availability": "Disponivel",
+        "type": "Temaki",
+        "price": 32.89,
+        "image": "../src/assets/listJaponeseFood/TemakiDeKani-Kama.png",
+        "description": "Tiras de Kani kama, Cream Chesse, Cebolinha, Gergelim."
+    },
+    {
+        "id": 11,
+        "availability": "Disponivel",
+        "type": "Temaki",
+        "price": 35.89,
+        "image": "../src/assets/listJaponeseFood/TemakiCamaraoFry.png",
+        "description": "Camarão Empanado e Frito, Arroz, Nori, Cebolinha e Cream Chesse."
+    },
+    {
+        "id": 12,
+        "availability": "Disponivel",
+        "type": "Temaki",
+        "price": 26.90,
+        "image": "../src/assets/listJaponeseFood/TemakiSalmaoCompleto.png",
+        "description": "Folha de Nori, Arroz Japonês Temperado, Pedaços de Salmão (Cubos), Cream Cheese, Cebolinha."
+    },
+    {
+        "id": 13,
+        "availability": "Disponivel",
+        "type": "Temaki",
+        "price": 22.89,
+        "image": "../src/assets/listJaponeseFood/TemakiSkin.png",
+        "description": "Pele de Salmão Grelhada, Arroz, Nori, Cream Chesse e Gergelim torrado."
+    },
+    {
+        "id": 14,
+        "availability": "Disponivel",
+        "type": "Sushi",
+        "price": 52.00,
+        "image": "../src/assets/listJaponeseFood/sushiUramakiEspecial.png",
+        "description": "Sushi 8 Unidades: Uramaki Salmão, Camarão, envolto em nori, shari e molho tarê."
+    },
+    {
+        "id": 15,
+        "availability": "Disponivel",
+        "type": "Sushi",
+        "price": 43.00,
+        "image": "../src/assets/listJaponeseFood/sushiJouDeVieira.png",
+        "description": "Sushi 4 Unidades: Shari envolto em lâmina de salmão, coberto com cream cheese, vieira maçaricada, massago black, lâmina de cebola roxa e molho tarê."
+    },
+    {
+        "id": 16,
+        "availability": "Disponivel",
+        "type": "Sushi",
+        "price": 35.00,
+        "image": "../src/assets/listJaponeseFood/sushiJouDeSalmao.png",
+        "description": "Sushi 4 Unidades: Shari envolto em lâmina de salmão, coberto com salmão batido e cebolinha."
+    },
+    {
+        "id": 17,
+        "availability": "Disponivel",
+        "type": "Yakisoba",
+        "price": 40.99,
+        "image": "../src/assets/listJaponeseFood/YakisobaClassico.png",
+        "description": "Macarrão com pedaços de carne, frango, legumes ao molho especial."
+    },
+    {
+        "id": 18,
+        "availability": "Disponivel",
+        "type": "Yakisoba",
+        "price": 55.99,
+        "image": "../src/assets/listJaponeseFood/YakisobaTradicional.png",
+        "description": "Macarrão especial com vegetais sempre fresquinhos, cerne e frango puxados no tacho chinês cobertos com o exclusivo molho secreto yakisoba panda feito com molho shoyu e especiarias. Peso média 830g"
+    },
+    {
+        "id": 19,
+        "availability": "Disponivel",
+        "type": "Yakisoba",
+        "price": 31.90,
+        "image": "../src/assets/listJaponeseFood/YakisobaVegetariano.png",
+        "description": "Nosso delicioso macarrão oriental. Acompanhado por legumes frescos (cenoura, brócolis, acelga, repolho) e cogumelos. Finalizados com molho à base de shoyu. Alérgicos: Contem soja. Pode conter crustáceos (molusco), ovos, peixes e leite."
+    },
+    {
+        "id": 20,
+        "availability": "Disponivel",
+        "type": "Yakisoba",
+        "price": 49.90,
+        "image": "../src/assets/listJaponeseFood/YakisobaTradicional2.png",
+        "description": "Macarrão,Carne,Frango e Legumes!"
+    },
+    {
+        "id": 21,
+        "availability": "Disponivel",
+        "type": "Yakisoba",
+        "price": 38.50,
+        "image": "../src/assets/listJaponeseFood/YakisobaDeFrango.png",
+        "description": "Delicioso macarrão chun-li, frito, cubos de filé de frango, legumes selecionados: brócolis, couve flor, cenoura e acelga, salteadas no molho chun-li a base de shoyu."
+    }
+]

@@ -52,8 +52,6 @@ export const HeaderLinks = styled.div`
             }
         }
     }
-
-    
 `
 
 export const Presentation = styled.div`
@@ -95,7 +93,6 @@ export const Presentation = styled.div`
 `
 
 export const Menu = styled.div`
-    height: 100vh;
     width: 100%;
 
     ul{
@@ -142,13 +139,14 @@ export const JapaneseFood = styled.div`
 export const FoodCard = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     position: relative;
     z-index: 1;
     background-color: #333333;
     border-radius: 1rem;
     padding: 1rem;
     gap: 1rem;
+    width: 100%;
 
     img{
     
@@ -168,17 +166,22 @@ export const FoodCard = styled.div`
     @media (min-width: 1000px){
         flex-direction: column;
         align-items: flex-start;
+        width: 22vw;
+        
         a{
-            padding: 0.8rem;
             width: 100%;
+            padding: 0.8rem;
         }
     }
 
 `
 
 export const FoodInfos = styled.div`
+    width: 100%;
     p{
         color: #fff;
+        max-height: 2.5rem; /* Define a altura máxima do parágrafo */
+        overflow-y: auto;  /* Adiciona a barra de rolagem vertical se o conteúdo exceder a altura */
     }
 
     span{

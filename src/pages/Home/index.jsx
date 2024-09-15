@@ -6,8 +6,6 @@ import iconRamen from "../../assets/icons/ramen.png";
 import iconTemaki from "../../assets/icons/temaki.png";
 import iconBarcaDeSushi from "../../assets/icons/barcadesushi.png";
 
-import imgSushiDeSalmao from '../../assets/listJaponeseFood/sushiDeSalmao.png'
-
 import Header from "../../components/Header";
 import {
 	Container,
@@ -20,7 +18,28 @@ import {
     FoodInfos,
 } from "./style";
 
+import React, { useState, useEffect } from 'react';
+
+
 export default function Home() {
+
+    const [produtos, setProdutos] = useState([]);
+    const [selectedType, setSelectedType] = useState(''); // Estado para o tipo selecionado
+
+    useEffect(() => {
+        fetch('/produtos.json')
+            .then(response => response.json())
+            .then(data => setProdutos(data))
+            .catch(error => console.error('Erro ao carregar os produtos:', error));
+    }, []);
+
+    const handleTypeClick = (type) => {
+        setSelectedType(type);
+    };
+
+    const filteredProdutos = selectedType ? produtos.filter(produto => produto.type === selectedType) : produtos;
+
+        
 	return (
 		<Container>
 			<Backgroud>
@@ -47,54 +66,42 @@ export default function Home() {
 					<img src={photoSushi} alt="foto de sushi" />
 				</Presentation>
 			</Backgroud>
-			<Menu id="menu">
-				<ul>
-					<li>
-						<img src={iconSushi} alt="icon sushi" />
-						<p>Sushi</p>
-					</li>
-					<li>
-						<img src={iconRamen} alt="icon ramen" />
-						<p>Ramen</p>
-					</li>
-					<li>
-						<img src={iconTemaki} alt="icon temaki" />
-						<p>Temaki</p>
-					</li>
-					<li>
-						<img src={iconBarcaDeSushi} alt="icon barca de sushi" />
-						<p>Combos</p>
-					</li>
-				</ul>
-				<JapaneseFood>
-					<FoodCard>
-						<img src={imgSushiDeSalmao} alt="sushi de salmão" />
-						<FoodInfos>
-                            <span>Disponivel</span>
-							<p>Sushi de salmão 9 pec</p>
-                            <span>R$30,00</span>
-						</FoodInfos>
-                        <a href="#agendar">Agendar</a>
-					</FoodCard>
-                    <FoodCard>
-						<img src={imgSushiDeSalmao} alt="sushi de salmão" />
-						<FoodInfos>
-                            <span>Disponivel</span>
-							<p>Sushi de salmão 9 pec</p>
-                            <span>R$30,00</span>
-						</FoodInfos>
-                        <a href="#agendar">Agendar</a>
-					</FoodCard>
-                    <FoodCard>
-						<img src={imgSushiDeSalmao} alt="sushi de salmão" />
-						<FoodInfos>
-                            <span>Disponivel</span>
-							<p>Sushi de salmão 9 pec</p>
-                            <span>R$30,00</span>
-						</FoodInfos>
-                        <a href="#agendar">Agendar</a>
-					</FoodCard>
-				</JapaneseFood>
+            <Menu id="menu">
+                <ul>
+                    <li onClick={() => handleTypeClick('Sushi')} onKeyDown={handleTypeClick} >
+                        <img src={iconSushi} alt="icon sushi" />
+                        <p>Sushi</p>
+                    </li>
+                    <li onClick={() => handleTypeClick('Yakisoba')} onKeyDown={handleTypeClick}>
+                        <img src={iconRamen} alt="icon ramen" />
+                        <p>Yakisoba</p>
+                    </li>
+                    <li onClick={() => handleTypeClick('Temaki')} onKeyDown={handleTypeClick}>
+                        <img src={iconTemaki} alt="icon temaki" />
+                        <p>Temaki</p>
+                    </li>
+                    <li onClick={() => handleTypeClick('Combos')} onKeyDown={handleTypeClick}>
+                        <img src={iconBarcaDeSushi} alt="icon barca de sushi" />
+                        <p>Combos</p>
+                    </li>
+                </ul>
+                <JapaneseFood>
+                    {filteredProdutos.length > 0 ? (
+                        filteredProdutos.map(produto => (
+                            <FoodCard key={produto.id}>
+                                <img src={produto.image} alt={produto.type} />
+                                <FoodInfos>
+                                    <span>{produto.availability}</span>
+                                    <p>{produto.description}</p>
+                                    <span>R${produto.price.toFixed(2)}</span>
+                                </FoodInfos>
+                                <a href="#agendar">Agendar</a>
+                            </FoodCard>
+                        ))
+                    ) : (
+                        <p>Sem produtos disponíveis para este tipo.</p>
+                    )}
+                </JapaneseFood>
 			</Menu>
 		</Container>
 	);
